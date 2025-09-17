@@ -1,0 +1,22 @@
+{
+  "plugins": ["stylelint-order"],
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "apply",
+          "layer",
+          "responsive",
+          "screen",
+          "tailwind",
+          "theme",
+          "variants"
+        ]
+      }
+    ],
+    "no-descending-specificity": null,
+    "order/properties-alphabetical-order": true
+  }
+}
