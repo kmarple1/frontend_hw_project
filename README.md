@@ -1,7 +1,9 @@
 # Casetext Homework Assignment
+
 Your task in this challenge is to build a demo web app that is a functional ATM machine. Please use a stubbed backend as if you were interacting with a server (ie reading from a file or local storage). Feel free to add any bells and whistles you’d like.
 
-## Guidelines:
+## Guidelines
+
 - Please work in React, using Javascript or Typescript, and utilize any additional frameworks or libraries as needed.
 - Incorporate state management effectively in your application.
 - Utilize React hooks for managing state and side effects.
@@ -13,9 +15,27 @@ Your task in this challenge is to build a demo web app that is a functional ATM 
 - Please put your code up on your GitHub account.
 - Please include instructions about how we can run your app. (If your solution works better in one browser over the others, let us know which one.)
 
-## Optional:
+## Optional
+
 - While a backend is not required for this assignment, if you feel like it will help you, please create one. You may consider setting up a NodeJS backend server with Express to handle all transactions on the server.
 
-## Mocks:
+## Mocks
+
 ![Mock 1](assets/Mock_1.png "Mock")
 ![Mock 2](assets/Mock_2.png "Mock2")
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
