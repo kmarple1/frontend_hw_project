@@ -58,6 +58,7 @@
     "prettier-plugin-tailwindcss": "^0.6.6",
     "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-tailwindcss": "^1.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.2",
     "tailwindcss": "^4.1.13",

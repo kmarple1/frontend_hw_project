@@ -1,0 +1,38 @@
+[
+  {
+    "pin": "1234",
+    "card": "star",
+    "name": "Peter Parker",
+    "balance": 200
+  },
+  {
+    "pin": "0000",
+    "card": "pulse",
+    "name": "Augustus Moneybags III",
+    "balance": 2000
+  },
+  {
+    "pin": "4321",
+    "card": "maestro",
+    "name": "Tiny Tim",
+    "balance": 0
+  },
+  {
+    "pin": "1111",
+    "card": "mastercard",
+    "name": "Chester Chesterfield",
+    "balance": 21.5
+  },
+  {
+    "pin": "5555",
+    "card": "plus",
+    "name": "Rick S'broke",
+    "balance": -20
+  },
+  {
+    "pin": "9999",
+    "card": "visa",
+    "name": "Gwen Stacy",
+    "balance": 200
+  }
+]
