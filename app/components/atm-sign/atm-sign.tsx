@@ -5,9 +5,9 @@ import Graffiti from "../../../public/graffiti.png";
 
 export default function ATMSign() {
   return (
-    <div className="relative rounded-xl bg-blue-500 px-[62px] py-[13px]">
+    <div className="relative rounded-xl bg-blue-500 px-[62.5px] py-[13.5px]">
       <Image src={ATMSignImage} alt="ATM Sign" />
-      <Image className="absolute top-[30px] right-[24px]" src={Graffiti} alt="Graffiti" />
+      <Image className="absolute top-[31px] right-[24px]" src={Graffiti} alt="Graffiti" />
     </div>
   );
 }

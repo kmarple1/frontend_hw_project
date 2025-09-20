@@ -4,10 +4,12 @@ import React from "react";
 
 import { getUser, UserEntry } from "../../api";
 import Button from "../button/button";
+import Cards from "../cards/cards";
 import Screen from "../screen/screen";
 
 export default function Interface() {
   const [action, setAction] = React.useState("");
+  const [activeCard, setActiveCard] = React.useState("");
   const [buttonValue, setButtonValue] = React.useState("");
   const [buttonText, setButtonText] = React.useState(["", "", "", "", "", "", "", ""]);
   const [screenText, setScreenText] = React.useState("Welcome to the ATM");
@@ -33,13 +35,13 @@ export default function Interface() {
   }, []);
 
   /*
-   * Show the main menu. Passing "name" is a quick hack to avoid showing "undefined" when the state
-   * update hasn't finished yet.
+   * Show the main menu. Passing "name" is a quick hack to avoid showing "undefined" or a previous name
+   * when the state update hasn't finished yet.
    */
   const showMainMenu = (name?: String) => {
     setInitialState();
     setIsTitle(false);
-    setScreenText(`Hi ${user.name || name}!\nPlease make a choice...`);
+    setScreenText(`Hi ${name || user.name}!\nPlease make a choice...`);
     setButtonText(["", "", "Withdraw", "Deposit", "", "Exit", "Balance", "Re-Enter PIN"]);
   };
 
@@ -77,6 +79,7 @@ export default function Interface() {
 
         if (newUser) {
           setUser(newUser);
+          setActiveCard(newUser.card);
           showMainMenu(newUser.name);
         } else if (inputValue !== "") {
           setScreenText("Invalid PIN. Please try again:");
@@ -134,6 +137,7 @@ export default function Interface() {
       case "Enter PIN":
       case "Re-Enter PIN":
         setAction(buttonValue);
+        setActiveCard("");
         setInputValue("");
         setInputType("password");
         setShowInput(true);
@@ -143,6 +147,7 @@ export default function Interface() {
         break;
 
       case "Exit":
+        setActiveCard("");
         setInitialState();
         break;
 
@@ -176,30 +181,35 @@ export default function Interface() {
   };
 
   return (
-    <div className="relative">
-      <div className="">
-        <Screen
-          inputType={inputType}
-          inputValue={inputValue}
-          isTitle={isTitle}
-          onSubmit={submitForm}
-          showInput={showInput}
-          setInputValue={setInputValue}
-          text={screenText}
-        />
+    <>
+      <div className="self-center py-[9px]">
+        <Cards activeCard={activeCard} />
       </div>
-      <div className="absolute top-[95px] left-[-54px] flex flex-col items-start">
-        <Button isLeft onClick={setButtonValue} text={buttonText[0]} />
-        <Button isLeft onClick={setButtonValue} text={buttonText[1]} />
-        <Button isLeft onClick={setButtonValue} text={buttonText[2]} />
-        <Button isLeft onClick={setButtonValue} text={buttonText[3]} />
+      <div className="relative">
+        <div className="">
+          <Screen
+            inputType={inputType}
+            inputValue={inputValue}
+            isTitle={isTitle}
+            onSubmit={submitForm}
+            showInput={showInput}
+            setInputValue={setInputValue}
+            text={screenText}
+          />
+        </div>
+        <div className="absolute top-[95px] left-[-54px] flex flex-col items-start">
+          <Button isLeft onClick={setButtonValue} text={buttonText[0]} />
+          <Button isLeft onClick={setButtonValue} text={buttonText[1]} />
+          <Button isLeft onClick={setButtonValue} text={buttonText[2]} />
+          <Button isLeft onClick={setButtonValue} text={buttonText[3]} />
+        </div>
+        <div className="absolute top-[95px] right-[-54px] flex flex-col items-end">
+          <Button onClick={setButtonValue} text={buttonText[4]} />
+          <Button onClick={setButtonValue} text={buttonText[5]} />
+          <Button onClick={setButtonValue} text={buttonText[6]} />
+          <Button onClick={setButtonValue} text={buttonText[7]} />
+        </div>
       </div>
-      <div className="absolute top-[95px] right-[-54px] flex flex-col items-end">
-        <Button onClick={setButtonValue} text={buttonText[4]} />
-        <Button onClick={setButtonValue} text={buttonText[5]} />
-        <Button onClick={setButtonValue} text={buttonText[6]} />
-        <Button onClick={setButtonValue} text={buttonText[7]} />
-      </div>
-    </div>
+    </>
   );
 }

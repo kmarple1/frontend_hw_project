@@ -30,7 +30,7 @@ export default function Screen({
   return (
     <div className="h-[232px] w-[244px] border-4 border-gray-200 bg-blue-400 text-center font-mono font-bold whitespace-pre-wrap [word-spacing:4px]">
       {isTitle ? (
-        <div className="px-[14px] py-[24px] text-[22px]/[16px]">{text}</div>
+        <div className="px-[14px] py-[26px] text-[22px]/[16px]">{text}</div>
       ) : (
         <div className="flex h-[118px] flex-col justify-center align-middle text-[14px]/[14px]">{text}</div>
       )}

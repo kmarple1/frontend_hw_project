@@ -4,9 +4,9 @@
 import data from "./data.json";
 
 export type UserEntry = {
-  pin: String;
-  card: String;
-  name: String;
+  pin: string;
+  card: string;
+  name: string;
   balance: number;
 };
 

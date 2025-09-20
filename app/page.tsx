@@ -5,9 +5,8 @@ import ATMSign from "./components/atm-sign/atm-sign";
 
 export default function Home() {
   return (
-    <div className="absolute bottom-0 flex w-screen flex-row">
-      {/* <Image src={Mock1} alt="test" /> */}
-      <div className="mx-auto flex w-fit flex-col">
+    <div className="absolute flex h-screen w-screen flex-row">
+      <div className="mx-auto mt-auto flex h-screen w-fit flex-col justify-end">
         <ATMSign />
         <ATMBody />
       </div>
