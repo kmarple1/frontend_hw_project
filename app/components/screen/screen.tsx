@@ -41,6 +41,7 @@ export default function Screen({
             ref={inputRef}
             className="w-[80px] p-[4px] text-center caret-white"
             onChange={(event) => setInputValue(event.target.value)}
+            step="0.01"
             type={inputType}
             value={inputValue}
           />

@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Sample data can be found in `app/data.json`. Valid PINs are: 1234, 0000, 4321, 1111, 5555 and 9999.
 
-NOTE: When inputting values, there is an input field in the middle of the screen. It should autofocus, but it might be invisible if it doesn't.
+NOTES: When inputting values, there is an input field in the middle of the screen. It should autofocus, but it might be invisible if it doesn't. Also, you can use the Enter key to submit values, but it has issues with decimal places while clicking the button on the ATM doesn't. Didn't have time to debug that one.
 
 ## Notes on Design
 
