@@ -18,6 +18,8 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Sample data can be found in `app/data.json`. Valid PINs are: 1234, 0000, 4321, 1111, 5555 and 9999.
+
 NOTE: When inputting values, there is an input field in the middle of the screen. It should autofocus, but it might be invisible if it doesn't.
 
 ## Notes on Design
