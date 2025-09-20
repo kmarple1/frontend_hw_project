@@ -68,7 +68,7 @@ export default function Interface() {
           }));
 
           setShowInput(false);
-          setScreenText(`Deposit complete. Your current balance is:\n\n$${newBalance}`);
+          setScreenText(`Deposit complete. Your current balance is:\n\n$${newBalance.toFixed(2)}`);
           setButtonText(["", "", "", "", "", "Exit", "", "Main Menu"]);
         }
         break;
@@ -101,7 +101,7 @@ export default function Interface() {
           }));
 
           setShowInput(false);
-          setScreenText(`Withdrawal complete. Your current balance is:\n\n$${newBalance}`);
+          setScreenText(`Withdrawal complete. Your current balance is:\n\n$${newBalance.toFixed(2)}`);
           setButtonText(["", "", "", "", "", "Exit", "", "Main Menu"]);
         }
         break;
@@ -117,7 +117,7 @@ export default function Interface() {
   React.useEffect(() => {
     switch (buttonValue) {
       case "Balance":
-        setScreenText(`Your current balance is:\n\n$${user.balance}`);
+        setScreenText(`Your current balance is:\n\n$${user.balance.toFixed(2)}`);
         setButtonText(["", "", "", "", "", "Exit", "", "Main Menu"]);
         break;
 
